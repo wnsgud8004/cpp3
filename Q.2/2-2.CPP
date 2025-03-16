@@ -3,7 +3,7 @@
 int main() {
     int num;
     
-    printf("1000 미만의 정수를 입력하세요: ");
+    printf("10000 미만의 정수를 입력하세요: ");
     scanf("%d", &num);
 
     if (num < 0 || num >= 1000) {
@@ -11,10 +11,10 @@ int main() {
         return 1; 
     }
 
-    int hundred = num / 100;      // 백의 자리
-    int ten = (num % 100) / 10;   // 십의 자리
-    int one = num % 10;           // 일의 자리
-    int first = 1;  // 첫 번째 출력인지 여부 (공백 조절용)
+    int hundred = num / 100;      
+    int ten = (num % 100) / 10;   
+    int one = num % 10;           
+    int first = 1; 
 
     if (num == 0) {
         printf("영");
@@ -25,13 +25,13 @@ int main() {
             first = 0;
         }
         if (ten > 0) {
-            if (!first) printf(" ");  // 앞에 출력된 값이 있으면 공백 추가
+            if (!first) printf(" "); 
             if (ten > 1) printf("%d", ten);
             printf("십");
             first = 0;
         }
         if (one > 0) {
-            if (!first) printf(" ");  // 앞에 출력된 값이 있으면 공백 추가
+            if (!first) printf(" ");  
             printf("%d", one);
         }
     }

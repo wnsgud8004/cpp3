@@ -3,7 +3,7 @@
 int main() {
     int num;
     
-    printf("1000 미만의 정수를 입력하세요: ");
+    printf("10000 미만의 정수를 입력하세요: ");
     scanf("%d", &num);
 
     if (num < 0 || num >= 1000) {
